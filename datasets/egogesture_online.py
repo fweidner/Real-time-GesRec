@@ -108,7 +108,8 @@ def get_annotation(data, whole_path):
     print("@@@@@@@@@@@@@@", whole_path)
 
     for key, value in data['database'].items():
-        if key.split('_')[0] == whole_path:
+        tmp_whole_path = whole_path.replace("\\", "/")
+        if key.split('_')[0] == tmp_whole_path:
             annotation.append(value['annotations'])
 
     return  annotation
