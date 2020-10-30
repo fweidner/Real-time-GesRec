@@ -146,11 +146,11 @@ def make_dataset( annotation_path, video_path , whole_path,sample_duration, n_sa
                 'video': whole_video_path,
                 'index': _ ,
                 'video_id' : _ 
-
             }
-        
-        # print(range(_    - int(sample_duration/8), _   ))
-        counts = np.bincount(label_list[np.array(list(range(_    - int(sample_duration/8), _   )))])
+
+        #print(range(_ - int(sample_duration/8), _ ))
+        counts = np.bincount(label_list[np.array(list(range(_ - int(sample_duration/8), _ )))])
+        #print(np.argmax(counts))
         sample['label'] = np.argmax(counts)
         if n_samples_for_each_video == 1:
             sample['frame_indices'] = list(range(_ , _ + sample_duration))
