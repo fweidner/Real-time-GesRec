@@ -114,3 +114,12 @@ ENV/
 .DS_Store
 
 .vscode
+results/opts_det.json
+
+results/opts_clf.json
+
+Resources/
+
+pretrained_models/
+
+results/
