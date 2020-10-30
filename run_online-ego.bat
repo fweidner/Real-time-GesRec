@@ -1,15 +1,17 @@
 python online_test.py ^
---root_path C:\Projects\HandGesture\Real-time-GesRec ^
---video_path E:\Datasets\HandGestureDataset\EgoGesture\images ^
+--root_path C:/Projects/HandGesture/Real-time-GesRec ^
+--video_path E:/Datasets/HandGestureDataset/EgoGesture ^
 --annotation_path annotation_EgoGesture/egogestureall.json ^
 --result_path results ^
---dataset egogesture    ^
+--dataset egogesture ^
 --sample_duration_det 8 ^
 --sample_duration_clf 32 ^
---model_det resnetl ^
+--model_det resnext ^
 --model_clf resnext ^
---model_depth_det 10 ^
+--model_depth_det 101 ^
+--width_mult_det 0.5 ^
 --model_depth_clf 101 ^
+--width_mult_clf 2.0 ^
 --resnet_shortcut_det A ^
 --resnet_shortcut_clf B ^
 --batch_size 1 ^
@@ -28,7 +30,7 @@ python online_test.py ^
 --det_queue_size 4 ^
 --det_counter 2 ^
 --clf_strategy median ^
---clf_queue_size 16 ^
---clf_threshold_pre 0.6 ^
+--clf_queue_size 32 ^
+--clf_threshold_pre 1.0 ^
 --clf_threshold_final 0.15 ^
---stride_len 1 ^
+--stride_len 1
